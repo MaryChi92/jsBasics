@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо скопировать и вставить в данный скрипт все функции из 4 задания.
+Необходимо реализовать функцию:
+mathOperation(arg1, arg2, operation);
+Параметры:
+arg1 - первое число.
+arg2 - второе число.
+operation - строка, которая содержит один символ из: "+", "-", "*", "/".
+Функция mathOperation должна вернуть результат операции, который был передан в
+параметр operation для двух первых аргументов (arg1 и arg2).
+Функция mathOperation должна использовать для вычисления функции из 4 задания.
+
+Примеры вызова функции:
+console.log(mathOperation(5, 3, "+")); // 8
+console.log(mathOperation(5, 3, ":)")); // NaN
+
+Функции mathOperation всегда передаются корректные числа, проверки на NaN,
+Infinity делать не нужно, однако, в случае если был передан некорректный
+аргумент в параметр operation, необходимо вернуть NaN.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+<script>
+  "use strict";
+
+  /* А можно ли в данном случае сделать импорт предыдущего файла в этот,
+  чтобы избежать копирования функций? */
+
+  /**
+  * This function calculates sum of two arguments.
+  * @param {number} first number.
+  * @param {number} second number.
+  * @returns {number} The sum of two arguments.
+  */
+  function getSum (a, b) {
+    return a + b;
+  }
+
+  /**
+  * This function calculates difference of two arguments.
+  * @param {number} first number.
+  * @param {number} second number.
+  * @returns {number} The difference of two arguments.
+  */
+  function getDifference (a, b) {
+    if (a > b) {
+      return a - b;
+    } else {
+      return b - a;
+    }
+  }
+
+  /**
+  * This function multiplies one argument by another.
+  * @param {number} first number.
+  * @param {number} second number.
+  * @returns {number} The product of two arguments.
+  */
+  function makeMultiplication (a, b) {
+    return a * b;
+  }
+
+  /**
+  * This function divides one argument by another.
+  * @param {number} first number.
+  * @param {number} second number.
+  * @returns {number} The quotient of two arguments.
+  */
+  function makeDivision (a, b) {
+    return a / b;
+  }
+
+  /**
+  * This function calculates sum, difference, product or quotient of two
+  * arguments (depending on the chosen operation).
+  * @param {number} first number.
+  * @param {number} second number.
+  * @param {string} operation.
+  * @returns {number} The result of calculation of two arguments.
+  */
+  function mathOperation (arg1, arg2, operation) {
+    if (operation === '+') {
+      return getSum (arg1, arg2);
+    } else if (operation === '-') {
+      return getDifference (arg1, arg2);
+    } else if (operation === '*') {
+      return makeMultiplication (arg1, arg2);
+    } else if (operation === '/') {
+      return makeDivision (arg1, arg2);
+    } return NaN
+  }
+
+  console.log(mathOperation(1, 15, '+'));
+  console.log(mathOperation(3, 10, '-'));
+  console.log(mathOperation(9, 50, '*'));
+  console.log(mathOperation(50, 10, '/'));
+  console.log(mathOperation(50, 10, ':'));
+</script>
+</body>
+</html>

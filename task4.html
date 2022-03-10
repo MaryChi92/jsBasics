@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо реализовать четыре функции, каждая функция должна принимать по два
+числа и выполнять одну из операций (каждая функция выполняет одну из них):
+1. Сложение
+2. Разность
+3. Умножение
+4. Деление
+
+Необходимо сделать так, чтобы функция вернула число, например выражение
+`console.log(sum(2, 6));` должно вывести число 8 в консоль (sum - функция
+сложения в данном примере, ваши названия функций могут отличаться).
+
+Округлять значения, которые возвращают функции не нужно, однако, обратите
+внимание на разность, функция должна вычесть из большего числа меньшее, либо
+вернуть 0, если числа равны.
+
+Функциям всегда передаются корректные числа, проверки на NaN, Infinity делать
+не нужно.
+
+Необходимо для всех функций прописать комментарии jsdoc https://jsdoc.app/.
+-->
+<script>
+  "use strict";
+
+  /**
+  * This function calculates sum of two arguments.
+  * @param {number} first number.
+  * @param {number} second number.
+  * @returns {number} The sum of two arguments.
+  */
+  function getSum (a, b) {
+    return a + b;
+  }
+
+  /**
+  * This function calculates difference of two arguments.
+  * @param {number} first number.
+  * @param {number} second number.
+  * @returns {number} The difference of two arguments.
+  */
+  function getDifference (a, b) {
+    if (a > b) {
+      return a - b;
+    } else {
+      return b - a;
+    }
+  }
+
+  /**
+  * This function multiplies one argument by another.
+  * @param {number} first number.
+  * @param {number} second number.
+  * @returns {number} The product of two arguments.
+  */
+  function makeMultiplication (a, b) {
+    return a * b;
+  }
+
+  /**
+  * This function divides one argument by another.
+  * @param {number} first number.
+  * @param {number} second number.
+  * @returns {number} The quotient of two arguments.
+  */
+  function makeDivision (a, b) {
+    return a / b;
+  }
+
+  console.log(getSum(1, 5));
+  console.log(getDifference(3, 10));
+  console.log(makeMultiplication(9, 50));
+  console.log(makeDivision(50, 10));
+</script>
+</body>
+</html>
