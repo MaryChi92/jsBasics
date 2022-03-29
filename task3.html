@@ -49,7 +49,7 @@
       currentStar.previousElementSibling.classList.add('golden');
       currentStar = event.target.previousElementSibling;
     }
-  })
+  });
 
   /*
   2. Когда мы уводим курсор мыши от звезды, все поставленные классы из первого
@@ -57,7 +57,7 @@
    */
   document.addEventListener('mouseout', event => {
     if (event.target.tagName !== 'I') {
-      return
+      return;
     }
     event.target.classList.remove('golden');
     let currentStar = event.target;
@@ -65,7 +65,7 @@
       currentStar.previousElementSibling.classList.remove('golden');
       currentStar = event.target.previousElementSibling;
     }
-  })
+  });
 
   /*
   3. Когда мы переводим мышь от одной звезды к другой, у нас могут мигать
